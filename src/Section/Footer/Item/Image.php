@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\System\Section\Footer\Item;
+namespace Be\Theme\ShopFai\Section\Footer\Item;
 
 /**
  * @BeConfig("图像", icon="el-icon-picture")

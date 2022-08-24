@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\System\Section\Footer\Item;
+namespace Be\Theme\ShopFai\Section\Footer\Item;
 
 /**
  * @BeConfig("底部菜单", icon="el-icon-fa fa-navicon")

@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\System\Section\Footer\Item;
+namespace Be\Theme\ShopFai\Section\Footer\Item;
 
 /**
  * @BeConfig("富文本", icon="el-icon-fa fa-edit")
