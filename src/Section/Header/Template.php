@@ -622,7 +622,7 @@ class Template extends Section
             echo '<div class="header-desktop-toolbar header-desktop-toolbar-user">';
             echo '<a href="javascript:void(0);" onclick="return DrawerUser.toggle();">';
             echo '<i class="header-icon header-icon-user"></i>';
-            echo '<span><' . (Be::getUser()->isGuest() ? 'Sign In' : 'Dashboard') . '</span>';
+            echo '<span>' . (Be::getUser()->isGuest() ? 'Sign In' : 'Dashboard') . '</span>';
             echo '</a>';
             echo '</div>';
             echo '<div class="header-desktop-toolbar header-desktop-toolbar-cart">';
