@@ -1,0 +1,25 @@
+{
+  "name": "be/theme-shopfai",
+  "type": "library",
+  "description": "店熵商城默认主题",
+  "keywords": [
+    "ShopFai",
+    "店熵商城默认主题"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "liu12",
+      "email": "i@liu12.com",
+      "homepage": "http://www.liu12.com/"
+    }
+  ],
+  "require": {
+    "be/app-shopfai": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Be\\Theme\\ShopFai\\": "src/"
+    }
+  }
+}

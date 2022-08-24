@@ -1,0 +1,52 @@
+<?php
+namespace Be\Theme\ShopFai\Config;
+
+/**
+ * @BeConfig("主题")
+ */
+class Theme
+{
+
+    /**
+     * @BeConfigItem("主色调",
+     *     driver="FormItemColorPicker")
+     */
+    public string $mainColor = '#FF6600';
+
+    /**
+     * @BeConfigItem("字体大小",
+     *     driver="FormItemInputNumberInt")
+     */
+    public int $fontSize = 16;
+
+    /**
+     * @BeConfigItem("背景颜色",
+     *     driver="FormItemColorPicker")
+     */
+    public string $backgroundColor = '#F5F5F5';
+
+    /**
+     * @BeConfigItem("字体颜色",
+     *     driver="FormItemColorPicker")
+     */
+    public string $fontColor = '#333333';
+
+    /**
+     * @BeConfigItem("超链接颜色",
+     *     driver="FormItemColorPicker")
+     */
+    public string $linkColor = '#333333';
+
+    /**
+     * @BeConfigItem("超链接悬停颜色",
+     *     driver="FormItemColorPicker")
+     */
+    public string $linkHoverColor = '#FF6600';
+
+    /**
+     * @BeConfigItem("侧边栏弹出时是否平移页面",
+     *     driver = "FormItemSwitch")
+     */
+    public int $isMovedByDrawer = 0;
+
+}

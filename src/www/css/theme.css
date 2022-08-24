@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    outline: none;
+    text-decoration: underline;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.link-hover {
+    position: relative;
+}
+
+.link-hover:hover {
+    text-decoration: none;
+}
+
+.link-hover:before {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    content: '';
+    display: block;
+    transition: width 0.3s ease;
+    visibility: hidden;
+}
+
+.link-hover:hover:before {
+    width: 100%;
+    visibility: visible;
+}
+
+.round-be-floating .be-input {
+    border-radius: 2rem;
+    padding-left: 1.5rem !important;
+}
+
+.round-be-floating .be-floating-label {
+    padding-left: 1.5rem;
+}
+
+.round-be-input {
+    border-radius: 1.5rem;
+    padding-left: 1.2rem !important;
+}
+
+
+@keyframes ajaxLoading {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#ajax-loader {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    z-index: 1050;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    display: none;
+}
+
+#ajax-loader div {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 35px;
+    height: 35px;
+    border: 4px solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -webkit-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -o-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    border-color: var(--main-color) transparent transparent transparent;
+}
+
+#ajax-loader div:nth-child(1) {
+    -moz-animation-delay: -0.45s;
+    -webkit-animation-delay: -0.45s;
+    -o-animation-delay: -0.45s;
+    animation-delay: -0.45s
+}
+
+#ajax-loader div:nth-child(2) {
+    -moz-animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
+    -o-animation-delay: -0.3s;
+    animation-delay: -0.3s
+}
+
+#ajax-loader div:nth-child(3) {
+    -moz-animation-delay: -0.15s;
+    -webkit-animation-delay: -0.15s;
+    -o-animation-delay: -0.15s;
+    animation-delay: -0.15s
+}
+
+#overlay {
+    position: fixed;
+    background-color: rgba(35, 35, 35, .8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+.icon-star, .icon-star-fill {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.2rem;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1rem 1rem;
+}
+
+.icon-star {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23bbb' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z'%3e%3c/path%3e%3c/svg%3e");
+}
+
+.icon-star-fill {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23fd9427' d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z'%3e%3c/path%3e%3c/svg%3e");
+}
+
+.icon-star-120, .icon-star-fill-120 {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.25rem;
+    background-size: 1.2rem 1.2rem;
+}
+
+.icon-star-150, .icon-star-fill-150 {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.3rem;
+    background-size: 1.5rem 1.5rem;
+}
+
+
+.js-open-layer body{
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.js-open-layer #overlay{
+    display: block;
+}
+
+.js-open-layer {
+    overflow: hidden;
+}
+
+
+
+.be-pagination {
+    display: flex;
+}
+
+.be-pagination li {
+    flex: 0 0 auto;
+}
+
+.be-pagination li a,
+.be-pagination li span {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: .5rem 1rem;
+}
+
+.be-pagination li a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all .3s ease-in-out;
+}
+
+.be-pagination li span {
+    color: #999;
+}
+
+.be-pagination li a:hover {
+    background-color: #eee;
+}
+
+.be-pagination li:not(:first-child) a,
+.be-pagination li:not(:first-child) span {
+    margin-left: -1px;
+}
+
+.be-pagination li:first-child a,
+.be-pagination li:first-child span {
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+}
+
+.be-pagination li:last-child a,
+.be-pagination li:last-child span {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.be-pagination li.active a,
+.be-pagination li.active span {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.be-pagination-lg li a,
+.be-pagination-lg li span {
+    font-size: 1.25rem;
+    padding: .75rem 1.5rem;
+}
+
+.be-pagination-lg li:first-child a,
+.be-pagination-lg li:first-child span {
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+}
+
+.be-pagination-lg li:last-child a,
+.be-pagination-lg li:last-child span {
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+}
+
+
+/* --------------------------------- validator --------------------------------- */
+
+form .be-input.error,
+form .be-select.error,
+form .be-textarea.error {
+    border-color: #f30;
+    box-shadow: 0 0 0 1px #f30;
+}
+
+form label.error {
+    color: #f30;
+    margin-top: 5px;
+    display: inline-block;
+}
