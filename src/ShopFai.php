@@ -13,13 +13,14 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
-    <script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.phpbe.com/scss/be.css"/>
-
     <?php
     $wwwUrl = \Be\Be::getProperty('Theme.ShopFai')->getWwwUrl();
     ?>
+    <script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/js/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.phpbe.com/scss/be.css"/>
+
     <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/drawer.css" />
     <script src="<?php echo $wwwUrl; ?>/js/drawer-menu.js"></script>
     <script src="<?php echo $wwwUrl; ?>/js/drawer-search.js"></script>
