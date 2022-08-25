@@ -96,7 +96,7 @@
         const Store = {
             name: "<?php echo $configStore->name; ?>",
             currency: "<?php echo $configStore->currency; ?>",
-            currencySymbol: "<?php echo $configStore->currency_symbol; ?>"
+            currencySymbol: "<?php echo $configStore->currencySymbol; ?>"
         };
     </script>
 
