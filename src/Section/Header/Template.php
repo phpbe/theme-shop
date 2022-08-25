@@ -14,7 +14,7 @@ class Template extends Section
         echo '<style type="text/css">';
 
         echo '#' . $this->id . ' .header-mobile,';
-        echo '#' . $this->id . ' .header-desktop {';
+        echo '#' . $this->id . ' .header-desktop-top {';
         echo 'background-color: var(--main-color);';
         echo '}';
 
