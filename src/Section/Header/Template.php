@@ -49,7 +49,7 @@ class Template extends Section
         // 手机端
         echo '@media (max-width: 991px) {';
         echo '#' . $this->id . ' {';
-        echo 'height: 5rem;';
+        echo 'height: 4rem;';
         echo '}';
 
         echo '#' . $this->id . ' .header-mobile {';
@@ -74,7 +74,7 @@ class Template extends Section
         echo '#' . $this->id . ' .header-mobile-left-toolbars {';
         echo 'flex: 0 1 auto;';
         echo 'display: flex;';
-        echo 'justify-content: flex-end;';
+        echo 'justify-content: flex-start;';
         echo '}';
 
         echo '#' . $this->id . ' .header-mobile-left-toolbar {';
