@@ -80,8 +80,28 @@
         }
     </style>
 
-    <be-head>
-    </be-head>
+    <script>
+        const Url = "<?php echo beUrl(); ?>";
+        const ShopFaiUrl = {
+            cartGetProducts: "<?php echo beUrl('ShopFai.Cart.getProducts'); ?>",
+            cartAdd: "<?php echo beUrl('ShopFai.Cart.Add'); ?>",
+            cartRemove: "<?php echo beUrl('ShopFai.Cart.remove'); ?>",
+            cartChange: "<?php echo beUrl('ShopFai.Cart.change'); ?>",
+            userLoginCheck: "<?php echo beUrl('ShopFai.User.loginCheck'); ?>",
+            userCenterDashboard: "<?php echo beUrl('ShopFai.UserCenter.dashboard'); ?>",
+        };
+        <?php
+        $configStore = \Be\Be::getConfig('App.ShopFai.Store');
+        ?>
+        const Store = {
+            name: "<?php echo $configStore->name; ?>",
+            currency: "<?php echo $configStore->currency; ?>",
+            currencySymbol: "<?php echo $configStore->currency_symbol; ?>"
+        };
+    </script>
+
+<be-head>
+</be-head>
 </head>
 <body>
     <?php
