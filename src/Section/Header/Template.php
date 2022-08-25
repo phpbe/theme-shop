@@ -68,7 +68,7 @@ class Template extends Section
         echo 'flex-wrap: wrap;';
         echo 'justify-content: space-between;';
         echo 'align-items: center;';
-        echo 'padding: 0.5rem 0;';
+        echo 'padding: 1rem 0;';
         echo '}';
 
         echo '#' . $this->id . ' .header-mobile-left-toolbars {';
@@ -136,6 +136,8 @@ class Template extends Section
 
         echo '#' . $this->id . ' .header-mobile-right-toolbars {';
         echo 'flex: 0 1 auto;';
+        echo 'display: flex;';
+        echo 'justify-content: flex-end;';
         echo '}';
 
         echo '#' . $this->id . ' .header-mobile-right-toolbar {';
@@ -736,6 +738,8 @@ class Template extends Section
             }
             echo '</ul>';
             echo '</div>';
+            echo '</div>';
+
             echo '</div>';
 
             echo '</div>';
