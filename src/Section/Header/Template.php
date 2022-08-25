@@ -673,7 +673,7 @@ class Template extends Section
                 }
 
                 if ($active) {
-                    echo 'header-desktop-menu-lv1-item-active';
+                    echo ' header-desktop-menu-lv1-item-active';
                 }
                 echo '">';
 
