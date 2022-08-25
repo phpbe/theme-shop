@@ -26,11 +26,11 @@ class Template extends Section
         echo 'cursor: pointer;';
         echo '}';
 
-        echo '#' . $this->id . ' .header-icon-search {';
+        echo '#' . $this->id . ' .header-icon-menu {';
         echo 'background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3e%3cpath fill=\'%23fff\' d=\'M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z\'/%3e%3c/svg%3e");';
         echo '}';
 
-        echo '#' . $this->id . ' .header-icon-menu {';
+        echo '#' . $this->id . ' .header-icon-search {';
         echo 'background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3e%3cpath fill=\'%23fff\' d=\'M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z\'/%3e%3c/svg%3e");';
         echo '}';
 
@@ -167,13 +167,13 @@ class Template extends Section
         echo 'position: relative;';
         echo '}';
 
-        echo '#' . $this->id . ' .header-mobile-right-toolbar-user .header-icon-cart {';
+        echo '#' . $this->id . ' .header-mobile-right-toolbar-cart .header-icon-cart {';
         echo 'width: 30px;';
         echo 'height: 30px;';
         echo 'background-size: 30px 30px;';
         echo '}';
 
-        echo '#' . $this->id . ' .header-mobile-right-toolbar-user .header-toolbar-cart-counter {';
+        echo '#' . $this->id . ' .header-mobile-right-toolbar-cart .header-toolbar-cart-counter {';
         echo 'position: absolute;';
         echo 'top: -4px;';
         echo 'right: -4px;';
@@ -588,7 +588,7 @@ class Template extends Section
             echo '<div class="header-desktop-search">';
             echo '<form class="header-desktop-search-form" method="get" action="' . beUrl('ShopFai.Product.search') . '">';
             echo '<input type="hidden" name="route" value="ShopFai.Product.search">';
-            echo '<input class="header-desktop-search-form-input" id="header-desktop-search-form-input" type="text" placeholder="Search the store" autocomplete="off" name="q" value="' . Be::getRequest()->get('q', '') . '">';
+            echo '<input class="header-desktop-search-form-input" id="header-desktop-search-form-input" type="text" placeholder="Search the store" autocomplete="off" name="keywords" value="' . Be::getRequest()->get('keywords', '') . '">';
             echo '<button class="header-desktop-search-form-submit" type="submit">';
             echo '<svg viewBox="0 0 512 512">';
             echo '<path d="M495,466.2L377.2,348.4c29.2-35.6,46.8-81.2,46.8-130.9C424,103.5,331.5,11,217.5,11C103.4,11,11,103.5,11,217.5 S103.4,424,217.5,424c49.7,0,95.2-17.5,130.8-46.7L466.1,495c8,8,20.9,8,28.9,0C503,487.1,503,474.1,495,466.2z M217.5,382.9 C126.2,382.9,52,308.7,52,217.5S126.2,52,217.5,52C308.7,52,383,126.3,383,217.5S308.7,382.9,217.5,382.9z"></path>';
@@ -603,7 +603,7 @@ class Template extends Section
                 echo '<div class="be-fs-125 be-fw-bold be-lh-125 be-mb-100">Top Searches</div>';
                 foreach ($hotKeywords as $hotKeyword) {
                     if (!$hotKeyword) continue;
-                    echo '<a class="header-desktop-search-keyword" href="' . beUrl('ShopFai.Product.search', ['q' => $hotKeyword]) . '">';
+                    echo '<a class="header-desktop-search-keyword" href="' . beUrl('ShopFai.Product.search', ['keywords' => $hotKeyword]) . '">';
                     echo $hotKeyword;
                     echo '</a>';
                 }
