@@ -59,4 +59,11 @@ class Page
     public string $spacingTablet = '1.75rem';
     public string $spacingDesktop = '2rem';
 
+    /**
+     * @BeConfigItem("默认按钮样式",
+     *     driver = "FormItemInput"
+     * )
+     */
+    public string $buttonClass = 'be-btn be-btn-round';
+
 }
