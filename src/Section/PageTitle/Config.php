@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\System\Section\PageTitle;
+namespace Be\Theme\ShopFai\Section\PageTitle;
 
 
 /**
