@@ -278,13 +278,7 @@
                 ?>
                 <div class="be-d-flex">
                     <div class="be-flex-0">
-                        <img src="<?php
-                        if ($my->avatar) {
-                            echo \Be\Be::getProperty('App.ShopFai')->getWwwUrl() . '/user/avatar/' . $my->avatar;
-                        } else {
-                            echo beUrl() . '/app/ShopFai/Template/User/images/avatar.png';
-                        }
-                        ?>" alt="<?php echo $my->first_name . ' ' . $my->last_name; ?>" style="width: 75px; max-height: 75px;">
+                        <img src="<?php echo $my->avatar; ?>" alt="<?php echo $my->first_name . ' ' . $my->last_name; ?>" style="width: 75px; max-height: 75px;">
                     </div>
 
                     <div class="be-flex-1 be-pl-100">
