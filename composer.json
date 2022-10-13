@@ -14,9 +14,6 @@
       "homepage": "http://www.liu12.com/"
     }
   ],
-  "require": {
-    "be/app-shopfai": "*"
-  },
   "autoload": {
     "psr-4": {
       "Be\\Theme\\ShopFai\\": "src/"
