@@ -1,6 +1,6 @@
 <?php
 
-namespace Be\Theme\ShopFai\Section\PageTitle;
+namespace Be\Theme\Shop\Section\PageTitle;
 
 use Be\Theme\Section;
 

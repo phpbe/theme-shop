@@ -1,6 +1,6 @@
 <?php
 
-namespace Be\Theme\ShopFai\Section\Header;
+namespace Be\Theme\Shop\Section\Header;
 
 use Be\Be;
 use Be\Theme\Section;
@@ -518,7 +518,7 @@ class Template extends Section
             $this->js();
 
             $beUrl = beUrl();
-            $configStore = Be::getConfig('App.ShopFai.Store');
+            $configStore = Be::getConfig('App.Shop.Store');
 
             echo '<div class="header">';
 
@@ -588,8 +588,8 @@ class Template extends Section
             echo '</div>';
 
             echo '<div class="header-desktop-search">';
-            echo '<form class="header-desktop-search-form" method="get" action="' . beUrl('ShopFai.Product.search') . '">';
-            echo '<input type="hidden" name="route" value="ShopFai.Product.search">';
+            echo '<form class="header-desktop-search-form" method="get" action="' . beUrl('Shop.Product.search') . '">';
+            echo '<input type="hidden" name="route" value="Shop.Product.search">';
             echo '<input class="header-desktop-search-form-input" id="header-desktop-search-form-input" type="text" placeholder="Search the store" autocomplete="off" name="keywords" value="' . Be::getRequest()->get('keywords', '') . '">';
             echo '<button class="header-desktop-search-form-submit" type="submit">';
             echo '<svg viewBox="0 0 512 512">';
@@ -597,7 +597,7 @@ class Template extends Section
             echo '</svg>';
             echo '</button>';
             echo '</form>';
-            $hotKeywords = \Be\Be::getService('App.ShopFai.Product')->getTopSearchKeywords(12);
+            $hotKeywords = \Be\Be::getService('App.Shop.Product')->getTopSearchKeywords(12);
             if (count($hotKeywords) > 0) {
                 echo '<div class="header-desktop-search-keywords">';
                 echo '<div class="be-container be-p-relative">';
@@ -605,7 +605,7 @@ class Template extends Section
                 echo '<div class="be-fs-125 be-fw-bold be-lh-125 be-mb-100">Top Searches</div>';
                 foreach ($hotKeywords as $hotKeyword) {
                     if (!$hotKeyword) continue;
-                    echo '<a class="header-desktop-search-keyword" href="' . beUrl('ShopFai.Product.search', ['keywords' => $hotKeyword]) . '">';
+                    echo '<a class="header-desktop-search-keyword" href="' . beUrl('Shop.Product.search', ['keywords' => $hotKeyword]) . '">';
                     echo $hotKeyword;
                     echo '</a>';
                 }
@@ -616,7 +616,7 @@ class Template extends Section
 
             echo '<div class="header-desktop-toolbars">';
             echo '<div class="header-desktop-toolbar header-desktop-toolbar-wishlists">';
-            echo '<a href="' . beUrl('ShopFai.UserFavorite.favorites') . '">';
+            echo '<a href="' . beUrl('Shop.UserFavorite.favorites') . '">';
             echo '<i class="header-icon header-icon-wishlist"></i>';
             echo '<span>Wish List</span>';
             echo '</a>';

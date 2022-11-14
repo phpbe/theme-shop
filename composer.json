@@ -1,5 +1,5 @@
 {
-  "name": "be/theme-shopfai",
+  "name": "be/theme-shop",
   "type": "library",
   "description": "店熵商城默认主题",
   "keywords": [
@@ -9,9 +9,9 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "liu12",
-      "email": "i@liu12.com",
-      "homepage": "http://www.liu12.com/"
+      "name": "1024i team",
+      "email": "1024i@1024i.com",
+      "homepage": "https://www.1024i.com/team"
     }
   ],
   "autoload": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Be\Theme\ShopFai\Section\Footer;
+namespace Be\Theme\Shop\Section\Footer;
 
 use Be\Be;
 use Be\Theme\Section;
@@ -190,7 +190,7 @@ class Template extends Section
                         case 'Payments':
                             echo '<div class="footer-payments" style="text-align:' . $itemConfig->align . '">';
 
-                            $wwwUrl = Be::getProperty('Theme.ShopFai')->getWwwUrl();
+                            $wwwUrl = Be::getProperty('Theme.Shop')->getWwwUrl();
 
                             if (isset($itemConfig->paypal) && $itemConfig->paypal) {
                                 echo '<img src="' . $wwwUrl . '/images/footer/payment/paypal.svg" alt="Paypal">';

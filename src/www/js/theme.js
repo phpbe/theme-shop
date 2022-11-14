@@ -29,7 +29,7 @@ function addToCart(goodsId, n) {
     quantity = parseInt(quantity);
     if (quantity <= 0) quantity = 1;
     $.ajax({
-        url: ShopFaiUrl.cartAdd,
+        url: ShopUrl.cartAdd,
         data: {
             "goodsId": goodsId,
             "quantity": quantity
@@ -55,7 +55,7 @@ function reload() {
 
 function topPopLogin() {
     $.ajax({
-        url: ShopFaiUrl.userLoginCheck,
+        url: ShopUrl.userLoginCheck,
         data: $("#top-pop-login-form").serialize(),
         type: "POST",
         success: function (json) {

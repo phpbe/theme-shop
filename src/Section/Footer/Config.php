@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\ShopFai\Section\Footer;
+namespace Be\Theme\Shop\Section\Footer;
 
 /**
  * @BeConfig("底部")
@@ -72,12 +72,12 @@ class Config
      * @BeConfigItem("子项",
      *     driver = "FormItemsConfigs",
      *     items = "return [
-     *          \Be\Theme\ShopFai\Section\Footer\Item\Menu::class,
-     *          \Be\Theme\ShopFai\Section\Footer\Item\RichText::class,
-     *          \Be\Theme\ShopFai\Section\Footer\Item\Image::class,
-     *          \Be\Theme\ShopFai\Section\Footer\Item\FollowUs::class,
-     *          \Be\Theme\ShopFai\Section\Footer\Item\Copyright::class,
-     *          \Be\Theme\ShopFai\Section\Footer\Item\Payments::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\Menu::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\RichText::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\Image::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\FollowUs::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\Copyright::class,
+     *          \Be\Theme\Shop\Section\Footer\Item\Payments::class,
      *     ]"
      * )
      */

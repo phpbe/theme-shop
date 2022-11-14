@@ -5,7 +5,7 @@ var Cart = {
         quantity = parseInt(quantity);
         if (quantity <= 0) quantity = 1;
         $.ajax({
-            url: ShopFaiUrl.cartAdd,
+            url: ShopUrl.cartAdd,
             data: {
                 "product_id": productId,
                 "product_item_id": productItemId,
@@ -29,7 +29,7 @@ var Cart = {
 
     remove: function (productId, productItemId, fnSuccessCallback) {
         $.ajax({
-            url: ShopFaiUrl.cartRemove,
+            url: ShopUrl.cartRemove,
             data: {
                 "product_id": productId,
                 "product_item_id": productItemId,
@@ -56,7 +56,7 @@ var Cart = {
         quantity = parseInt(quantity);
         if (quantity <= 0) quantity = 1;
         $.ajax({
-            url: ShopFaiUrl.cartChange,
+            url: ShopUrl.cartChange,
             data: {
                 "product_id": productId,
                 "product_item_id": productItemId,

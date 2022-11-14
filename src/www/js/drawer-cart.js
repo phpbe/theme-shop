@@ -7,7 +7,7 @@ var DrawerCart = {
         }
 
         $.ajax({
-            url: ShopFaiUrl.cartGetProducts,
+            url: ShopUrl.cartGetProducts,
             method: "GET",
             success: function (json) {
                 //console.log(json);
@@ -104,7 +104,7 @@ var DrawerCart = {
         let productItemId = $product.data("productitemid");
 
         $.ajax({
-            url: ShopFaiUrl.cartRemove,
+            url: ShopUrl.cartRemove,
             data: {
                 "product_id": productId,
                 "product_item_id": productItemId
@@ -150,7 +150,7 @@ var DrawerCart = {
         $quantity.val(quantity);
 
         $.ajax({
-            url: ShopFaiUrl.cartChange,
+            url: ShopUrl.cartChange,
             data: {
                 "product_id": productId,
                 "product_item_id": productItemId,

@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\ShopFai\Section\Header;
+namespace Be\Theme\Shop\Section\Header;
 
 /**
  * @BeConfig("头部", ordering="1")

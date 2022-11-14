@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\ShopFai\Section\Footer\Item;
+namespace Be\Theme\Shop\Section\Footer\Item;
 
 /**
  * @BeConfig("版权信息", icon="el-icon-fa fa-copyright")

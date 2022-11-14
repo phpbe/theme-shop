@@ -25,12 +25,12 @@ var DrawerUser = {
 
             submitHandler: function (form) {
                 $.ajax({
-                    url: ShopFaiUrl.userLoginCheck,
+                    url: ShopUrl.userLoginCheck,
                     data : $(form).serialize(),
                     type: "POST",
                     success: function (json) {
                         if (json.success) {
-                            window.location.href = ShopFaiUrl.userCenterDashboard
+                            window.location.href = ShopUrl.userCenterDashboard
                         } else {
                             alert(json.message);
                         }

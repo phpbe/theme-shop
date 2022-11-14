@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\ShopFai\Config;
+namespace Be\Theme\Shop\Config;
 
 class Page
 {
@@ -18,7 +18,7 @@ class Page
 
     public array $northSections = [
         [
-            'name' => 'Theme.ShopFai.Header',
+            'name' => 'Theme.Shop.Header',
         ],
     ];
 
@@ -50,12 +50,12 @@ class Page
 
     public array $southSections = [
         [
-            'name' => 'Theme.ShopFai.Footer',
+            'name' => 'Theme.Shop.Footer',
         ],
     ];
 
 
-    public string $pageTitleSection = 'Theme.ShopFai.PageTitle';
+    public string $pageTitleSection = 'Theme.Shop.PageTitle';
 
 
     // 五方位间的间距

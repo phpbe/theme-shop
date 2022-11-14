@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\ShopFai\Config;
+namespace Be\Theme\Shop\Config;
 
 /**
  * @BeConfig("主题")

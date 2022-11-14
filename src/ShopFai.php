@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <?php
-    $wwwUrl = \Be\Be::getProperty('Theme.ShopFai')->getWwwUrl();
+    $wwwUrl = \Be\Be::getProperty('Theme.Shop')->getWwwUrl();
     ?>
     <script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
     <script src="<?php echo $wwwUrl; ?>/js/jquery.validate.min.js"></script>
@@ -31,7 +31,7 @@
     <script src="<?php echo $wwwUrl; ?>/js/theme.js"></script>
 
     <?php
-    $configTheme = \Be\Be::getConfig('Theme.ShopFai.Theme');
+    $configTheme = \Be\Be::getConfig('Theme.Shop.Theme');
 
     $libCss = \Be\Be::getLib('Css');
     $mainColor = $configTheme->mainColor;
@@ -82,16 +82,16 @@
 
     <script>
         const Url = "<?php echo beUrl(); ?>";
-        const ShopFaiUrl = {
-            cartGetProducts: "<?php echo beUrl('ShopFai.Cart.getProducts'); ?>",
-            cartAdd: "<?php echo beUrl('ShopFai.Cart.Add'); ?>",
-            cartRemove: "<?php echo beUrl('ShopFai.Cart.remove'); ?>",
-            cartChange: "<?php echo beUrl('ShopFai.Cart.change'); ?>",
-            userLoginCheck: "<?php echo beUrl('ShopFai.User.loginCheck'); ?>",
-            userCenterDashboard: "<?php echo beUrl('ShopFai.UserCenter.dashboard'); ?>",
+        const ShopUrl = {
+            cartGetProducts: "<?php echo beUrl('Shop.Cart.getProducts'); ?>",
+            cartAdd: "<?php echo beUrl('Shop.Cart.Add'); ?>",
+            cartRemove: "<?php echo beUrl('Shop.Cart.remove'); ?>",
+            cartChange: "<?php echo beUrl('Shop.Cart.change'); ?>",
+            userLoginCheck: "<?php echo beUrl('Shop.User.loginCheck'); ?>",
+            userCenterDashboard: "<?php echo beUrl('Shop.UserCenter.dashboard'); ?>",
         };
         <?php
-        $configStore = \Be\Be::getConfig('App.ShopFai.Store');
+        $configStore = \Be\Be::getConfig('App.Shop.Store');
         ?>
         const Store = {
             name: "<?php echo $configStore->name; ?>",
@@ -201,8 +201,8 @@
             </div>
         </div>
         <div class="drawer-body">
-            <form class="drawer-search-form" method="get" action="<?php echo beUrl('ShopFai.Product.search'); ?>">
-                <input type="hidden" name="route" value="ShopFai.Product.search">
+            <form class="drawer-search-form" method="get" action="<?php echo beUrl('Shop.Product.search'); ?>">
+                <input type="hidden" name="route" value="Shop.Product.search">
                 <input class="drawer-search-form-input" type="text" placeholder="Search the store" autocomplete="off" name="q" value="<?php echo \Be\Be::getRequest()->get('q', ''); ?>">
                 <button class="drawer-search-form-submit" type="submit">
                     <svg viewBox="0 0 512 512">
@@ -212,13 +212,13 @@
             </form>
 
             <?php
-            $hotKeywords = \Be\Be::getService('App.ShopFai.Product')->getTopSearchKeywords(12);
+            $hotKeywords = \Be\Be::getService('App.Shop.Product')->getTopSearchKeywords(12);
             if (count($hotKeywords) > 0) {
                 echo '<div class="be-mt-200">';
                 echo '<div class="be-fs-125 be-fw-bold be-lh-125 be-mb-100">Top Searches</div>';
                 foreach ($hotKeywords as $hotKeyword) {
                     if (!$hotKeyword) continue;
-                    echo '<a class="drawer-search-keyword" href="'.beUrl('ShopFai.Product.search', ['q' => $hotKeyword]).'">';
+                    echo '<a class="drawer-search-keyword" href="'.beUrl('Shop.Product.search', ['q' => $hotKeyword]).'">';
                     echo $hotKeyword;
                     echo '</a>';
                 }
@@ -263,7 +263,7 @@
                 </form>
 
                 <div class="be-mb-100 be-ta-center">
-                    <a href="<?php echo beUrl('ShopFai.User.forgotPassword'); ?>" class="link-hover">Forgot your password?</a>
+                    <a href="<?php echo beUrl('Shop.User.forgotPassword'); ?>" class="link-hover">Forgot your password?</a>
                 </div>
 
                 <div class="be-p-50 be-fs-80 be-mb-100">
@@ -271,7 +271,7 @@
                 </div>
 
                 <div>
-                    <a href="<?php echo beUrl('ShopFai.User.register'); ?>" class="be-btn be-btn-outline be-btn-lg be-btn-round be-w-100">Create An Account</a>
+                    <a href="<?php echo beUrl('Shop.User.register'); ?>" class="be-btn be-btn-outline be-btn-lg be-btn-round be-w-100">Create An Account</a>
                 </div>
                 <?php
             } else {
@@ -295,10 +295,10 @@
                     <ul class="drawer-user-nav">
                         <?php
                         $links = [
-                            'ShopFai.Order.orders' => 'My Orders',
-                            'ShopFai.UserFavorite.favorites' => 'Wish List',
-                            'ShopFai.UserAddress.addresses' => 'Address Book',
-                            'ShopFai.UserCenter.setting' => 'Setting',
+                            'Shop.Order.orders' => 'My Orders',
+                            'Shop.UserFavorite.favorites' => 'Wish List',
+                            'Shop.UserAddress.addresses' => 'Address Book',
+                            'Shop.UserCenter.setting' => 'Setting',
                         ];
                         foreach ($links as $key => $val) {
                             echo '<li><a class="link-hover" href="' . beUrl($key) . '">'. $val . '</a></li>';
@@ -308,7 +308,7 @@
                 </div>
 
                 <div class="be-mt-200">
-                    <a href="<?php echo beUrl('ShopFai.User.logout'); ?>" class="be-btn be-btn-lg be-btn-round be-w-100">Log Out</a>
+                    <a href="<?php echo beUrl('Shop.User.logout'); ?>" class="be-btn be-btn-lg be-btn-round be-w-100">Log Out</a>
                 </div>
                 <?php
             }
@@ -318,7 +318,7 @@
 
     <?php if (!isset($this->hideHeaderCart) || !$this->hideHeaderCart) { ?>
     <div id="drawer-cart" class="drawer">
-        <form action="<?php echo beUrl('ShopFai.Cart.checkout'); ?>" method="post">
+        <form action="<?php echo beUrl('Shop.Cart.checkout'); ?>" method="post">
         <div class="drawer-fixed-header">
             <div class="drawer-header">
                 <div class="drawer-title">Your Cart</div>
@@ -343,7 +343,7 @@
             </div>
             <div class="be-ta-center be-mt-100">
                 <input type="submit" class="be-mb-100 be-btn be-btn-main be-btn-lg be-btn-round" value="Check Out" onclick="DrawerCart.checkout(this);" >
-                <a href="<?php echo beUrl('ShopFai.Cart.index'); ?>" class="be-mb-100 be-btn be-btn-outline be-btn-lg be-btn-round">View Cart</a>
+                <a href="<?php echo beUrl('Shop.Cart.index'); ?>" class="be-mb-100 be-btn be-btn-outline be-btn-lg be-btn-round">View Cart</a>
             </div>
         </div>
         </form>

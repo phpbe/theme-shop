@@ -1,6 +1,6 @@
 <?php
 
-namespace Be\Theme\ShopFai;
+namespace Be\Theme\Shop;
 
 class Property extends \Be\Theme\Property
 {
