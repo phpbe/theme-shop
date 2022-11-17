@@ -11,7 +11,13 @@ class Theme
      * @BeConfigItem("主色调",
      *     driver="FormItemColorPicker")
      */
-    public string $mainColor = '#FF6600';
+    public string $majorColor = '#FF6600';
+
+    /**
+     * @BeConfigItem("搭配颜色",
+     *     driver="FormItemColorPicker")
+     */
+    public string $minorColor = '#666666';
 
     /**
      * @BeConfigItem("字体大小",

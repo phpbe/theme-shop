@@ -15,7 +15,7 @@ class Template extends Section
 
         echo '#' . $this->id . ' .header-mobile,';
         echo '#' . $this->id . ' .header-desktop-top {';
-        echo 'background-color: var(--main-color);';
+        echo 'background-color: var(--major-color);';
         echo '}';
 
         echo '#' . $this->id . ' .header-icon {';
@@ -185,7 +185,7 @@ class Template extends Section
         echo 'border-radius: 50%;';
         echo 'font-size: 12px;';
         echo 'background-color: #fff;';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo 'text-align: center;';
         echo '}';
 
@@ -279,7 +279,7 @@ class Template extends Section
 
         echo '#' . $this->id . ' .header-desktop-search-form-submit {';
         echo 'flex: 1 1 auto;';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo 'border: none;';
         echo 'outline: none;';
         echo 'background-color: #fff;';
@@ -427,7 +427,7 @@ class Template extends Section
         echo 'border-radius: 50%;';
         echo 'font-size: 12px;';
         echo 'background-color: #fff;';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo 'text-align: center;';
         echo '}';
 
@@ -450,7 +450,7 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .header-desktop-menu-lv1-item-active > a {';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
         echo '#' . $this->id . ' .header-desktop-menu-lv1-item-with-dropdown:after {';

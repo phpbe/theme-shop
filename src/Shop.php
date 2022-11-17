@@ -9,43 +9,23 @@
     <meta name="keywords" content="<?php echo $this->metaKeywords ?? ''; ?>">
     <meta name="description" content="<?php echo $this->metaDescription ?? ''; ?>">
     <meta name="applicable-device" content="pc,mobile">
-    <base href="<?php echo beUrl(); ?>/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-
-    <?php
-    $wwwUrl = \Be\Be::getProperty('Theme.Shop')->getWwwUrl();
-    ?>
-    <script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
-    <script src="<?php echo $wwwUrl; ?>/js/jquery.validate.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.phpbe.com/scss/be.css"/>
-
-    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/drawer.css" />
-    <script src="<?php echo $wwwUrl; ?>/js/drawer-menu.js"></script>
-    <script src="<?php echo $wwwUrl; ?>/js/drawer-search.js"></script>
-    <script src="<?php echo $wwwUrl; ?>/js/drawer-user.js"></script>
-    <script src="<?php echo $wwwUrl; ?>/js/drawer-cart.js"></script>
-
-    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/theme.css" />
-    <script src="<?php echo $wwwUrl; ?>/js/theme.js"></script>
 
     <?php
     $configTheme = \Be\Be::getConfig('Theme.Shop.Theme');
 
-    $libCss = \Be\Be::getLib('Css');
-    $mainColor = $configTheme->mainColor;
-    $mainColor1 = $libCss->lighter($mainColor, 10);
-    $mainColor2 = $libCss->lighter($mainColor, 20);
-    $mainColor3 = $libCss->lighter($mainColor, 30);
-    $mainColor4 = $libCss->lighter($mainColor, 40);
-    $mainColor5 = $libCss->lighter($mainColor, 50);
-    $mainColor6 = $libCss->lighter($mainColor, 60);
-    $mainColor7 = $libCss->lighter($mainColor, 70);
-    $mainColor8 = $libCss->lighter($mainColor, 80);
-    $mainColor9 = $libCss->lighter($mainColor, 90);
-    $mainColorHover = $libCss->darker($mainColor, 10);
+    $beUrl = beUrl();
+    $wwwUrl = \Be\Be::getProperty('Theme.Shop')->getWwwUrl();
     ?>
+    <base href="<?php echo $beUrl; ?>/" >
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <script src="<?php echo $wwwUrl; ?>/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/lib/jquery/jquery.validate-1.19.2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.phpbe.com/ui/be.css" />
+    <link rel="stylesheet" href="https://cdn.phpbe.com/ui/be-icons.css"/>
+
     <style type="text/css">
         html {
             font-size: <?php echo $configTheme->fontSize; ?>px;
@@ -54,17 +34,19 @@
         }
 
         body {
-            --main-color: <?php echo $mainColor; ?>;
-            --main-color-1: <?php echo $mainColor1; ?>;
-            --main-color-2: <?php echo $mainColor2; ?>;
-            --main-color-3: <?php echo $mainColor3; ?>;
-            --main-color-4: <?php echo $mainColor4; ?>;
-            --main-color-5: <?php echo $mainColor5; ?>;
-            --main-color-6: <?php echo $mainColor6; ?>;
-            --main-color-7: <?php echo $mainColor7; ?>;
-            --main-color-8: <?php echo $mainColor8; ?>;
-            --main-color-9: <?php echo $mainColor9; ?>;
-            --main-color-hover: <?php echo $mainColorHover; ?>;
+        <?php
+        echo '--major-color: ' . $configTheme->majorColor . ';';
+
+        // CSS 处理库
+        $libCss = \Be\Be::getLib('Css');
+        for ($i=1; $i<=9; $i++) {
+            echo '--major-color-' . $i. ': ' . $libCss->lighter($configTheme->majorColor, $i * 10) . ';';
+            echo '--major-color' . $i. ': ' . $libCss->darker($configTheme->majorColor, $i * 10) . ';';
+        }
+
+        echo '--minor-color: ' . $configTheme->minorColor . ';';
+        echo '--font-color: ' . $configTheme->fontColor . ';';
+        ?>
         }
 
         a {
@@ -99,6 +81,15 @@
             currencySymbol: "<?php echo $configStore->currencySymbol; ?>"
         };
     </script>
+
+    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/drawer.css" />
+    <script src="<?php echo $wwwUrl; ?>/js/drawer-menu.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/js/drawer-search.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/js/drawer-user.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/js/drawer-cart.js"></script>
+
+    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/theme.css" />
+    <script src="<?php echo $wwwUrl; ?>/js/theme.js"></script>
 
 <be-head>
 </be-head>
