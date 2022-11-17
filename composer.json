@@ -16,7 +16,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Be\\Theme\\ShopFai\\": "src/"
+      "Be\\Theme\\Shop\\": "src/"
     }
   }
 }

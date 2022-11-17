@@ -1,8 +1,8 @@
 # 店熵商城默认主题
 
-## 应用简介
+## 主题简介
 
-    店熵商城（be/app-shopfai）默认主题
+    本主题（be/theme-shop）为店熵商城（be/app-shop）默认主题
 
 
 ## 如何安装
@@ -11,10 +11,10 @@
 
     composer create-project be/new
 
-### 2 安装 be/app-shopfai
+### 2 安装 be/app-shop
 
-    composer require be/app-shopfai
+    composer require be/app-shop
 
-### 3 安装 be/theme-shopfai
+### 3 安装 be/theme-shop
 
-    composer require be/theme-shopfai
+    composer require be/theme-shop

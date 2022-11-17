@@ -24,7 +24,7 @@ class Page
 
     public array $middleSections = [
         [
-            'name' => 'be-page-title',
+            'name' => 'Theme.Shop.PageTitle',
         ],
         [
             'name' => 'be-page-content',
@@ -37,7 +37,7 @@ class Page
 
     public array $centerSections = [
         [
-            'name' => 'be-page-title',
+            'name' => 'Theme.Shop.PageTitle',
         ],
         [
             'name' => 'be-page-content',
@@ -54,20 +54,5 @@ class Page
         ],
     ];
 
-
-    public string $pageTitleSection = 'Theme.Shop.PageTitle';
-
-
-    // 五方位间的间距
-    public string $spacingMobile = '1.5rem';
-    public string $spacingTablet = '1.75rem';
-    public string $spacingDesktop = '2rem';
-
-    /**
-     * @BeConfigItem("默认按钮样式",
-     *     driver = "FormItemInput"
-     * )
-     */
-    public string $buttonClass = 'be-btn be-btn-round';
 
 }
