@@ -58,7 +58,7 @@ class index
      *     driver = "FormItemInput"
      * )
      */
-    public string $pageTitle = 'Home';
+    public string $pageTitle = '';
 
 
 }
