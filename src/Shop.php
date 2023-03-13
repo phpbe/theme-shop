@@ -250,7 +250,7 @@
                         <label class="be-floating-label" for="drawer-user-password">Password</label>
                     </div>
 
-                    <input type="submit" class="be-btn be-btn-main be-btn-lg be-btn-round be-w-100" value="Login">
+                    <input type="submit" class="be-btn be-btn-major be-btn-lg be-btn-round be-w-100" value="Login">
                 </form>
 
                 <div class="be-mb-100 be-ta-center">
@@ -333,7 +333,7 @@
                 <div class="be-col-auto" id="drawer-cart-total">$0.00</div>
             </div>
             <div class="be-ta-center be-mt-100">
-                <input type="submit" class="be-mb-100 be-btn be-btn-main be-btn-lg be-btn-round" value="Check Out" onclick="DrawerCart.checkout(this);" >
+                <input type="submit" class="be-mb-100 be-btn be-btn-major be-btn-lg be-btn-round" value="Check Out" onclick="DrawerCart.checkout(this);" >
                 <a href="<?php echo beUrl('Shop.Cart.index'); ?>" class="be-mb-100 be-btn be-btn-outline be-btn-lg be-btn-round">View Cart</a>
             </div>
         </div>
