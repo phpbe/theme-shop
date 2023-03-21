@@ -27,7 +27,7 @@ class Page
             'name' => 'Theme.Shop.PageTitle',
         ],
         [
-            'name' => 'be-page-content',
+            'name' => 'Theme.System.PageContent',
         ],
     ];
 
@@ -40,7 +40,7 @@ class Page
             'name' => 'Theme.Shop.PageTitle',
         ],
         [
-            'name' => 'be-page-content',
+            'name' => 'Theme.System.PageContent',
         ],
     ];
 
