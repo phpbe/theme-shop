@@ -18,5 +18,9 @@
     "psr-4": {
       "Be\\Theme\\Shop\\": "src/"
     }
+  },
+  "require": {
+    "be/be": "~2.7.0",
+    "be/app-shop": "*"
   }
 }
