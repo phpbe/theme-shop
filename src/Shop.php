@@ -89,7 +89,7 @@
     <script src="<?php echo $wwwUrl; ?>/js/drawer-cart.js"></script>
 
     <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/theme.css" />
-    <script src="<?php echo $wwwUrl; ?>/js/theme.js"></script>
+    <script src="<?php echo $wwwUrl; ?>/js/theme.js?v=20230528"></script>
 
 <be-head>
 </be-head>

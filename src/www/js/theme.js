@@ -24,31 +24,6 @@ $(document).ready(function () {
 });
 
 
-function addToCart(goodsId, n) {
-    var quantity = n ? n : 1;
-    quantity = parseInt(quantity);
-    if (quantity <= 0) quantity = 1;
-    $.ajax({
-        url: ShopUrl.cartAdd,
-        data: {
-            "goodsId": goodsId,
-            "quantity": quantity
-        },
-        type: "POST",
-        success: function (json) {
-            if (json.success) {
-                DrawerCart.load();
-                DrawerCart.show();
-            }
-        },
-        error: function () {
-            alert("Shopping cart add item failed!");
-        }
-    });
-}
-
-
-
 function reload() {
     window.location.reload();
 }
