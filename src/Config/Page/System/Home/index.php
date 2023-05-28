@@ -13,16 +13,16 @@ class index
     public int $middle = 1;
     public array $middleSections = [
         [
-            'name' => 'App.Shop.LatestTopN',
+            'name' => 'App.Shop.Product.LatestTopN',
         ],
         [
-            'name' => 'App.Shop.HottestTopN',
+            'name' => 'App.Shop.Product.HottestTopN',
         ],
         [
-            'name' => 'App.Shop.TopSalesTopN',
+            'name' => 'App.Shop.Product.TopSalesTopN',
         ],
         [
-            'name' => 'App.Shop.TopSearchTopN',
+            'name' => 'App.Shop.Product.HotSearchTopN',
         ],
     ];
 
